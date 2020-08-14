@@ -1,7 +1,7 @@
 <template>
-<div class="a-all">
+<div class="ap-all">
 
- 
+
 
   <div class="adv" :class="{toleft:isToLeft}">
     <div class="left2 " >
@@ -9,19 +9,17 @@
 
       <h2 class="h2 tl1">{{title1}}</h2>
       <h3 class="lh3 tl1">{{englist}}</h3>
+      <p class="p tl1">{{info}}</p>
+      <h3 class="h3 tl1">{{title2}}</h3>
+      <p class="p tl1">{{info2}}</p>
+      <p class="p tl1">平台经济一体化，打造大数据信息中心；</p>
 
-
-      <p class="p left1">{{info}}</p>
-      <h3 class="h3 left1">{{title2}}</h3>
-      <p class="p left1">{{info2}}</p>
-      <p class="p left1">平台经济一体化，打造大数据信息中心；</p>
-
-       <h3 class="h3 left1">{{title3}}</h3>
-        <p class="p left1">{{info3}}</p>
-        <p class="p left1">客户应用端，系统监控平台、以及施工端、巡查端，全方面立体式服务于运营管理者；</p>
-        <h3 class="h3 left1">{{title4}}</h3>
-        <p class="p left1">{{info4}}</p>
-         <p class="p left1">根本性解决收费不公开透明，其它系统方案不能解决的准确及时收费问题，避免运营商的损失。</p>
+       <h3 class="h3 tl1">{{title3}}</h3>
+        <p class="p tl1">{{info3}}</p>
+        <p class="p tl1">客户应用端，系统监控平台、以及施工端、巡查端，全方面立体式服务于运营管理者；</p>
+        <h3 class="h3 tl1">{{title4}}</h3>
+        <p class="p tl1">{{info4}}</p>
+         <p class="p tl1">根本性解决收费不公开透明，其它系统方案不能解决的准确及时收费问题，避免运营商的损失。</p>
 
     </div>
     <div class="right " >
@@ -29,8 +27,8 @@
     </div>
 
   </div>
-  
-   
+
+
     </div>
 </template>
 
@@ -51,12 +49,12 @@
           mounted () {
               // 先获取全部需要过渡效果的元素
               this.fadeInElements = Array.from(document.getElementsByClassName('tl1'))
-               this.left1 = Array.from(document.getElementsByClassName('left1'))
+
                 this.right = Array.from(document.getElementsByClassName('right'))
                //  console.log("hah"+this.left)
               // 监听鼠标滚动事件
               document.addEventListener('scroll', this.handleScroll)
-               document.addEventListener('scroll', this.handleScroll2)
+
                document.addEventListener('scroll', this.handleScroll3)
 
             },
@@ -67,7 +65,7 @@
                   //console.log(elem.className)
                   var cN=elem.className
                   if (this.isElemVisible(elem)) {
-                    elem.className=cN+" "+"animated fadeInRight"
+                    elem.className=cN+" "+"animated backInUp"
                      console.log(elem.className)
                     this.right.splice(i, 1) // 只让它运行一次
                   }
@@ -75,19 +73,7 @@
               },
 
 
-               handleScroll2 (evt) {
-                 for (var i = 0; i < this.left1.length; i++) {
-                   var elem = this.left1[i]
-                   //console.log(elem.className)
-                   var cN=elem.className
-                   if (this.isElemVisible(elem)) {
 
-                     elem.className=cN+" "+"animated slideInUp"
-                      console.log(elem.className)
-                     this.left1.splice(i, 1) // 只让它运行一次
-                   }
-                 }
-               },
 
 
 
@@ -97,16 +83,16 @@
                     var elem = this.fadeInElements[i]
                       var cN=elem.className
                     if (this.isElemVisible(elem)) {
-                     elem.className=cN+" "+"animated slideInDown"
+                     elem.className=cN+" "+"animated slideInUp"
                       console.log(elem.className)
-                     this.left1.splice(i, 1) // 只让它运行一次
+                     this.fadeInElements.splice(i, 1) // 只让它运行一次
                     }
                   }
                 },
            // 判断元素距离窗口的位置
               isElemVisible (el) {
                 var rect = el.getBoundingClientRect()
-                var elemTop = rect.top+100 // 200 = buffer
+                var elemTop = rect.top + 200 //= buffer
                 var elemBottom = rect.bottom
                 return elemTop < window.innerHeight && elemBottom >= 0
               }
@@ -117,7 +103,7 @@
 
 <style>
 
-    .a-all{
+    .ap-all{
       padding-left: 50px;
       padding-right: 50px;
       height: 655;

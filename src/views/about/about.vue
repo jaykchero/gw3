@@ -64,7 +64,17 @@
 
     },
 
+        data () {
+          return {
+              divider:{}
+          }
+        },
+
+
      mounted:function (){
+           this.divider = Array.from(document.getElementsByClassName('divider'))
+           // 监听鼠标滚动事件
+           document.addEventListener('scroll', this.handleScroll)
         // var topAbout1 = $('about1')[0].offsetTop;
          //console.log('topAbout1'+topAbout1)
         let maodian=this.GetQueryString('maodian');//进入页面，如果带有锚点参数，则跳转至锚点地方，参数值就是id名
@@ -83,6 +93,26 @@
        methods:{
           goAnchor,
           GetQueryString,
+
+          // 循环判断是否要触发过渡
+               handleScroll (evt) {
+                 for (var i = 0; i < this.divider.length; i++) {
+                   var elem = this.divider[i]
+                     var cN=elem.className
+                   if (this.isElemVisible(elem)) {
+                    elem.className=cN+" "+"animated slideInUp"
+                     console.log(elem.className)
+                    this.divider.splice(i, 1) // 只让它运行一次
+                   }
+                 }
+               },
+          // 判断元素距离窗口的位置
+             isElemVisible (el) {
+               var rect = el.getBoundingClientRect()
+               var elemTop = rect.top + 200 //= buffer
+               var elemBottom = rect.bottom
+               return elemTop < window.innerHeight && elemBottom >= 0
+             }
         },
 
 

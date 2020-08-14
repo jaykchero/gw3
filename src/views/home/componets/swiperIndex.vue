@@ -3,31 +3,31 @@
     <div class="swiper-container banner-swiper">
       <div class="swiper-wrapper">
          <div class="swiper-slide slide-one">
-           <div class="page">
+           <div class="page ani home"  swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
               <h3>普行智能停车</h3>
             </div>
            </div>
         <div class="swiper-slide slide-two">
-          <div class="page">
+          <div <div class="page ani home"  swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0.6s">>
              <h3>普行智能停车</h3>
            </div>
         </div>
         <div class="swiper-slide slide-three">
-            <div class="page">
+            <div<div class="page ani home"  swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0.6s">>
                <h3>普行智能停车</h3>
              </div>
         </div>
         <div class="swiper-slide slide-four">
-           <div class="page">
+           <div <div class="page ani home"  swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0.6s">>
               <h3>普行智能停车</h3>
             </div>
 
         </div>
 
       </div>
-      <div class="swiper-pagination animated slideInUp"></div>
-      <div class="swiper-button-prev animated slideInUp"></div>
-      <div class="swiper-button-next animated slideInUp"></div>
+      <div class="swiper-pagination"></div>
+     <!-- <div class="swiper-button-prev "></div>
+      <div class="swiper-button-next "></div> -->
     </div>
 
 </div>
@@ -36,7 +36,7 @@
 
 <script>
   import Swiper from "swiper"
-
+   import * as swiperAni from '../../../assets/js/animate.js' //根据自己的路径进行引入
 
 
   export default {
@@ -61,7 +61,7 @@
       			delay: 5000,
       			disableOnInteraction: false,
       		  },
-      		  speed: 700,
+      		  speed: 1000,
       		  //allowTouchMove: false,
       		  lazy: {
       			loadPrevNext: true,
@@ -74,14 +74,35 @@
       		  pagination: {
       		  			el: '.swiper-pagination',
       		  			clickable :true,
-      		  			renderBullet: function (index, className) {
-      		                return '<div class="' + className + '"><span></span><i></i></div>';
-      		              },
+
+      		  		  renderBullet: function (index, className) {
+                    var text="";
+      		  		          switch(index){
+      		  		            case 0:text='';break;
+      		  		            case 1:text='';break;
+      		  		            case 2:text='';break;
+      		  		            case 3:text='';break;
+      		  		            case 4:text='';break;
+      		  		          }
+      		  		          return '<span class="' + className + '">' + text + '</span>';
+      		  		        },
       		  		  },
       		  navigation: {
       			nextEl: '.swiper-button-next',
       			prevEl: '.swiper-button-prev',
       		  },
+
+            on:{
+              init: function(){
+               swiperAni.swiperAnimateCache(this); //隐藏动画元素
+               swiperAni.swiperAnimate(this); //初始化完成开始动画
+                 },
+                 slideChangeTransitionStart: function(){
+                 swiperAni.swiperAnimate(this); //每个slide开始切换时也运行当前slide动画
+                   //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+                    }
+                },
+
       		});
       		window.onresize=function(){
       		  swiper.update();
@@ -106,7 +127,7 @@
     .swiper-pagination{
 
         position: absolute;
-        top: 620px;
+        top: 620px !important;
         z-index: 999;
     }
 
@@ -189,52 +210,29 @@ body {
 		background-image:url(../../../assets/img/cursor-next.png);}
 	.swiper-button-prev{
 		background-image:url(../../../assets/img/cursor-prev.png);}
-	.swiper-pagination-bullet{
-		background:none;
-		opacity:1;
-		margin:0 6px !important;
-		width:9px;
-		height:9px;
-		position:relative;
-		outline:none;
-		vertical-align:middle;}
-	.swiper-pagination-bullet span{
-		width:3px;
-		height:3px;
-		background:#CCC;
-		display:block;
-		border-radius:50%;
-		margin-top:3px;
-		margin-left:3px;
-	}
-	.swiper-pagination-bullet i{
-		background:#000;
-		height:1px;
-		width:20px;
-		position:absolute;
-		top:4px;
-		transform:scaleX(0);
-		transform-origin:left;
-		z-index:3;
-		transition-timing-function:linear;
-		}
-	.swiper-pagination-bullet-active span,.swiper-pagination-bullet:hover span{
-		width:9px;
-		height:9px;
-		margin-top:0;
-		margin-left:0;
-		background:#000;
-		position:relative;
-		z-index:1;
-		}
-	.swiper-pagination-bullet-active i{
-		animation:middle 6s;
-		}
-	.swiper-pagination-bullet:first-child.swiper-pagination-bullet-active i{
-		animation:first 6s;
-		}
-	.swiper-pagination-bullet:last-child.swiper-pagination-bullet-active i{
-		animation:last 6s;
-		}
 
+
+
+
+
+
+
+</style>
+
+<style>
+  .swiper-pagination-bullet {
+       width: 15px !important;
+       height: 15px !important;
+       text-align: center;
+       line-height: 20px;
+       font-size: 12px;
+       opacity: 1;
+      background: -webkit-linear-gradient(right, #ffffff , #ff5500) !important;
+       background: linear-gradient(to left,  #ffffff , #ffffff) !important;
+     }
+
+     .swiper-pagination-bullet-active {
+       color: #fff;
+       background: #ffffff;
+     }
 </style>

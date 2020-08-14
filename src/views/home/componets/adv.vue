@@ -43,40 +43,54 @@
               this.fadeInElements = Array.from(document.getElementsByClassName('left1'))
                this.left = Array.from(document.getElementsByClassName('ab-right'))
                this.left2 = Array.from(document.getElementsByClassName('left2'))
-               
-            for (var i = 0; i < this.left2 .length; i++) {
-              var elem = this.left2 [i]
-              var cN =elem.className
-              if (this.isElemVisible(elem)) {
-                elem.className=cN+" "+"animated slideInUp"
-                this.left2.splice(i, 1) // 只让它运行一次
-              }
-              }
-              for (var i = 0; i < this.left.length; i++) {
-                var elem = this.left[i]
-                var cN =elem.className
-                if (this.isElemVisible(elem)) {
-                  elem.className=cN+" "+"animated slideInUp"
-
-                  this.left.splice(i, 1) // 只让它运行一次
-                }
-              }
-
-              for (var i = 0; i < this.fadeInElements.length; i++) {
-                var elem = this.fadeInElements[i]
-                var cN =elem.className
-                if (this.isElemVisible(elem)) {
-                  elem.className=cN+" "+"animated slideInDown"
-
-                  this.fadeInElements.splice(i, 1) // 只让它运行一次
-                }
-              }
+               // console.log(this.left.length)
+              // 监听鼠标滚动事件
+              document.addEventListener('scroll', this.handleScroll)
+               document.addEventListener('scroll', this.handleScroll2)
+                document.addEventListener('scroll', this.handleScroll3)
 
 
             },
              methods: {
 
+                // 循环判断是否要触发过渡
+                handleScroll3 (evt) {
+                
+                  for (var i = 0; i < this.left2 .length; i++) {
+                    var elem = this.left2 [i]
+                    var cN =elem.className
+                    if (this.isElemVisible(elem)) {
+                      elem.className=cN+" "+"animated slideInUp"
+                      this.left2.splice(i, 1) // 只让它运行一次
+                    }
+                  }
+                },
 
+                 // 循环判断是否要触发过渡
+                 handleScroll2 (evt) {
+                   for (var i = 0; i < this.left.length; i++) {
+                     var elem = this.left[i]
+                     var cN =elem.className
+                     if (this.isElemVisible(elem)) {
+                       elem.className=cN+" "+"animated slideInUp"
+
+                       this.left.splice(i, 1) // 只让它运行一次
+                     }
+                   }
+                 },
+
+                // 循环判断是否要触发过渡
+                handleScroll (evt) {
+                  for (var i = 0; i < this.fadeInElements.length; i++) {
+                    var elem = this.fadeInElements[i]
+                    var cN =elem.className
+                    if (this.isElemVisible(elem)) {
+                      elem.className=cN+" "+"animated slideInDown"
+
+                      this.fadeInElements.splice(i, 1) // 只让它运行一次
+                    }
+                  }
+                },
            // 判断元素距离窗口的位置
               isElemVisible (el) {
                 var rect = el.getBoundingClientRect()

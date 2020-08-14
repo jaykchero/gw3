@@ -1,16 +1,16 @@
 <template>
   <div class="home" v-loading="loading">
     <swiper id="swiperBox" v-bind:options="swiperOption" ref="mySwiper">
-      <swiper-slide class="swiper-slide slide-one">
-        <SwiperIndex ></SwiperIndex>
+      <swiper-slide class="swiper-slide slide-one" >
+        <SwiperIndex></SwiperIndex>
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-two">
-      <div class="home" style="#f9f9f8">
+      <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
         <my-adv :title1="adv1.title1" :info="adv1.info" :title2="adv1.title2" :list="adv1.list" :img="adv1.img"></my-adv>
       </div>
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-three">
-        <div class="home" >
+        <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >
               <my-adv
                is-to-left=true
               :title1=" adv2.title1" :info="adv2.info" :title2="adv2.title2"
@@ -26,6 +26,8 @@
 <script>
   import SwiperIndex from './componets/swiperIndex.vue'
   import myAdv from './componets/adv.vue'
+  import * as swiperAni from '../../assets/js/animate.js' //根据自己的路径进行引入
+
 
 import { swiper, swiperSlide,swiperPagination } from "vue-awesome-swiper";
 export default {
@@ -79,6 +81,17 @@ export default {
                 el: '.swiper-pagination1',
                 dynamicBullets: true,
               },
+
+            on:{
+              init: function(){
+               //swiperAni.swiperAnimateCache(this); //隐藏动画元素
+               swiperAni.swiperAnimate(this); //初始化完成开始动画
+                 },
+                 slideChangeTransitionStart: function(){
+                 swiperAni.swiperAnimate(this); //每个slide开始切换时也运行当前slide动画
+                   //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+                    }
+                },
       }
     };
   },
@@ -111,7 +124,7 @@ export default {
 
 .swiper-slide {
   font-size: 24px;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
