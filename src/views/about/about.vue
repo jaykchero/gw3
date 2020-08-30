@@ -28,14 +28,27 @@
       <div class="divider">
      <a-divider>
 
-<svg t="1597299904979" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="990" width="32" height="32"><path d="M512 512m-442.7 0a442.7 442.7 0 1 0 885.4 0 442.7 442.7 0 1 0-885.4 0Z" fill="#F79646" p-id="991" data-spm-anchor-id="a313x.7781069.0.i2" class=""></path><path d="M512 512m-263 0a263 263 0 1 0 526 0 263 263 0 1 0-526 0Z" fill="#ffffff" p-id="992" data-spm-anchor-id="a313x.7781069.0.i5" class="selected"></path></svg>
+    <svg t="1597299904979" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="990" width="32" height="32"><path d="M512 512m-442.7 0a442.7 442.7 0 1 0 885.4 0 442.7 442.7 0 1 0-885.4 0Z" fill="#F79646" p-id="991" data-spm-anchor-id="a313x.7781069.0.i2" class=""></path><path d="M512 512m-263 0a263 263 0 1 0 526 0 263 263 0 1 0-526 0Z" fill="#ffffff" p-id="992" data-spm-anchor-id="a313x.7781069.0.i5" class="selected"></path></svg>
 
        </a-divider>
       </div>
 
-      <div id="DevelopmentHistory" class="about2" style="padding-top: 60px;">
-        <DevelopmentHistory></DevelopmentHistory>
-      </div>
+
+
+   <div id="ProjectExperience" class="about"  style="padding-top: 50px;">
+     <ProjectExperience></ProjectExperience>
+   </div>
+
+   <div class="divider">
+     <a-divider>
+       <svg t="1597299904979" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="990" width="32" height="32"><path d="M512 512m-442.7 0a442.7 442.7 0 1 0 885.4 0 442.7 442.7 0 1 0-885.4 0Z" fill="#F79646" p-id="991" data-spm-anchor-id="a313x.7781069.0.i2" class=""></path><path d="M512 512m-263 0a263 263 0 1 0 526 0 263 263 0 1 0-526 0Z" fill="#ffffff" p-id="992" data-spm-anchor-id="a313x.7781069.0.i5" class="selected"></path></svg>
+
+     </a-divider>
+   </div>
+
+   <div id="DevelopmentHistory" class="about2" style="padding-top: 60px;">
+     <DevelopmentHistory></DevelopmentHistory>
+   </div>
 
       </div>
       <div class="about1">
@@ -50,6 +63,7 @@
   import about1 from './componets/aboutOurs.vue'
   import culture from './componets/Culture.vue'
   import DevelopmentHistory from './componets/DevelopmentHistory.vue'
+  import ProjectExperience from './componets/ProjectExperience.vue'
   import Bottom from '../../components/Bottom.vue'
 
 
@@ -61,7 +75,8 @@
        about1,
        culture,
        DevelopmentHistory,
-       Bottom
+       Bottom,
+      ProjectExperience
 
     },
 

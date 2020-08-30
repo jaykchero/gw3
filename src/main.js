@@ -16,6 +16,9 @@ Vue.use(Icon);
 // import ajax from './api'
 // Vue.prototype.$http =ajax;
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min'
+
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper);
 

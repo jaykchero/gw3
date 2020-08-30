@@ -10,10 +10,10 @@
       <p class="pp left1">{{info}}</p>
       <h3 class="h3 left1">{{title2}}</h3>
      <!--  <h3 class="lh3">{{englist2}}</h3> -->
-       <p class="p left1">{{info2}}</p>
+       <p class="pp left1">{{info2}}</p>
        <h3 class="h3 left1">{{title3}}</h3>
       <!--  <h3 class="lh3">{{englist3}}</h3> -->
-        <p class="p left1">{{info3}}</p>
+        <p class="pp left1">{{info3}}</p>
         </div>
     </div>
 
@@ -95,13 +95,19 @@
 </script>
 
 <style scoped="scoped">
-
+  .right{
+    top: 50px;
+    right: 50px;
+    position: absolute;
+    width: 500px;
+  }
 
   .toleft{
     flex-direction: row-reverse;
   }
 
   .adv{
+    position: relative;
     padding-top: 100px;
     display: flex;
     width: 1200px;

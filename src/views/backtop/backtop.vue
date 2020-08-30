@@ -21,22 +21,22 @@
  				<div class="d-service-item clearfix">
  					<span class="circle"><i class="i-tel"></i></span>
  					<div class="text">
- 						<p>服务热线</p>
- 						<p class="red number">4001-021-758</p>
+ 						<p>客服热线</p>
+ 						<p class="red number">0755-23286587</p>
  					</div>
  				</div>
- 				<div class="d-service-intro clearfix">
+ 				<!-- <div class="d-service-intro clearfix">
  					<p><i></i>功能和特性</p>
  					<p><i></i>价格和优惠</p>
  					<p><i></i>获取内部资料</p>
- 				</div>
+ 				</div> -->
  			</div>
  		</div>
  		<div class="d d-qrcode">
  			<i class="arrow"></i>
  			<div class="inner-box">
- 				<div class="qrcode-img"><img src="../../assets/images/side_ewm.jpg" alt=""></div>
- 				<p>微信服务号</p>
+ 				<div class="qrcode-img"><img src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/1598768066%281%29.png" style="	height: 180px; width: 180px;" alt=""></div>
+ 				<p>微信公众号</p>
  			</div>
  		</div>
 
@@ -92,4 +92,12 @@ export default {
 };
 </script>
 
-<style scoped src="../../assets/css/style.css"></style>
+<style scoped src="../../assets/css/style.css">
+	img{
+	
+		
+		margin-bottom: 100px;		
+	}
+
+
+</style>

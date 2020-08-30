@@ -2,13 +2,13 @@
   <div id="p-content">
 
     <div class="h-b">
-       
+
         <img v-lazy="hb" alt=""/>
     </div>
       <div class="p-content-item">
-   <test01 id="t1" class="test2"></test01>
-    <test02 id="t2" class="test1"></test02>
-      <test03 id="t3" class="test1"></test03>
+   <ParkingSystem id="t1" class="test2"></ParkingSystem>
+    <SocialEffect id="t2" class="test1" style="padding-top: 60px"></SocialEffect>
+      <EconomicBenefits id="t3" class="test1" style="padding-top: 60px"></EconomicBenefits>
        </div>
       <Bottom></Bottom>
 
@@ -16,17 +16,17 @@
 </template>
 
 <script>
-  import test01 from './components/ParkingSystem.vue'
-  import test02 from './components/test02.vue'
-  import test03 from './components/test03.vue'
+  import ParkingSystem from './components/ParkingSystem.vue'
+  import SocialEffect from './components/SocialEffect.vue'
+  import EconomicBenefits from './components/EconomicBenefits.vue'
   import Bottom from '../../components/Bottom.vue'
-  import $ from 'jquery'
+  //import $ from 'jquery'
   import {goAnchor,GetQueryString} from '../../assets/js/common.js';
   export default {
     components:{
-      test01,
-      test02,
-      test03,
+      ParkingSystem,
+      SocialEffect,
+      EconomicBenefits,
       Bottom
     },
 

@@ -5,8 +5,8 @@
 <div class="h-top " >
 
    <div class="h-logo " >
-    <!-- <img src="../assets/logo1.jpg" alt=""> -->
-    <span>logo位置</span>
+
+      <i class="logo"></i>
    </div>
 
    <div class="h-header ">
@@ -37,20 +37,22 @@
               </span>
            </a-menu-item>
 
-           <a-menu-item key="setting:3">
+
+<!--           <a-menu-item key="setting:4">-->
+<!--            <span-->
+<!--              > <router-link to="#/about">知识产权</router-link></span>-->
+<!--           </a-menu-item>-->
+           <a-menu-item key="setting:5">
+             <a :href="'#/about?maodian=ProjectExperience'">项目经验</a>
+
+           </a-menu-item>
+
+          <a-menu-item key="setting:3">
             <span>
             <a :href="'#/about?maodian=DevelopmentHistory'">发展历程</a>
-            <!-- <a href="/about/#DevelopmentHistory">普行文化</a> -->
+              <!-- <a href="/about/#DevelopmentHistory">普行文化</a> -->
            </span>
-           </a-menu-item>
-           <a-menu-item key="setting:4">
-            <span
-              > <router-link to="#/about">知识产权</router-link></span>
-           </a-menu-item>
-           <a-menu-item key="setting:5">
-            <span
-              > <router-link to="#/about">项目经验</router-link></span>
-           </a-menu-item>
+          </a-menu-item>
 
          </a-menu-item-group>
 
@@ -94,11 +96,11 @@
              <a :href="'#/puxingSmartParking?maodian=t1'">停车系统</a>
            </a-menu-item>
            <a-menu-item key="setting:2">
-              <a :href="'#/puxingSmartParking?maodian=t2'">经济效益</a>
+              <a :href="'#/puxingSmartParking?maodian=t2'">社会效益</a>
            </a-menu-item>
 
            <a-menu-item key="setting:3">
-             <a :href="'#/puxingSmartParking?maodian=t3'">test</a>
+             <a :href="'#/puxingSmartParking?maodian=t3'">经济效益</a>
            </a-menu-item>
            <a-menu-item key="setting:4">
              <a href="http://www.ptyibo.com/#/login" target="_blank">员工登录</a>
@@ -232,9 +234,15 @@
 
 <style>
 
-/* .router-link-exact-active {
+  .logo{
 
-} */
+    display: inline-block;
+    visibility: inherit;
+    width: 120px;
+    background: url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/logo2.1e9151c5.png) 0 30%/100% no-repeat scroll;
+    height: 70px;
+
+  }
 
   .ant-menu-item a:hover{
     color: #0080FF !important;

@@ -109,9 +109,17 @@
 
 </script>
 
-<style>
+<style scoped>
+
+  .right{
+    top: 50px;
+    right: 20px;
+    position: absolute;
+    width: 500px;
+  }
 
   .adv{
+    position: relative;
     padding-left: 50px;
     padding-right: 50px;
   }
