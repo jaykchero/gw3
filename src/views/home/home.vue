@@ -2,11 +2,15 @@
   <div class="home" v-loading="loading">
     <swiper id="swiperBox" v-bind:options="swiperOption" ref="mySwiper">
       <swiper-slide class="swiper-slide slide-one" >
-        <SwiperIndex></SwiperIndex>
+        <SwiperIndex ></SwiperIndex>
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-two">
       <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
-        <my-adv :title1="adv1.title1" :info="adv1.info" :title2="adv1.title2" :list="adv1.list" :img="adv1.img"></my-adv>
+<!--        <my-adv :title1="adv1.title1" :info="adv1.info" :title2="adv1.title2" :list="adv1.list" :img="adv1.img"></my-adv>-->
+        <h2>项目经验</h2>
+        <p>鼠标选中查看详情</p>
+        <Protecteds></Protecteds>
+
       </div>
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-three">
@@ -27,12 +31,14 @@
   import SwiperIndex from './componets/swiperIndex.vue'
   import myAdv from './componets/adv.vue'
   import * as swiperAni from '../../assets/js/animate.js' //根据自己的路径进行引入
+  import Protecteds from '../about/componets/ProjectExperience'
 
 
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
 
   components: {
+    Protecteds,
     SwiperIndex,
     swiper,
     swiperSlide,
@@ -108,7 +114,7 @@ export default {
 
 
 .swiper-slide {
-  font-size: 24px;
+  font-size: 16px;
 
   display: flex;
   flex-direction: column;
@@ -121,7 +127,7 @@ export default {
     overflow: hidden;
     h3,
     p {
-      font-size: 40px;
+      font-size: 20px;
       font-weight: 400;
       color: #fff;
     }

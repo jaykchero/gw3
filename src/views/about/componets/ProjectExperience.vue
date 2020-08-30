@@ -1,6 +1,6 @@
 <template>
     <div class="i-all">
-        <div class="i-header">
+        <div class="i-header"  v-if="show">
           <h2 class="h2 tl1">项目经验</h2>
           <h3 class="lh3 tl1">Project Experience</h3>
         </div>
@@ -100,8 +100,10 @@
 
 <script>
 export default {
+      props:["show"],
     data() {
         return {
+
           pt:"https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/putian.jpg",
           bj:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/beijing.jpg',
           heb:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/haerbing.jpg',
@@ -124,7 +126,6 @@ export default {
 </script>
 
 <style scoped lang="less">
-
 
   img{
     width: 300px;

@@ -36,7 +36,7 @@
 
 
    <div id="ProjectExperience" class="about"  style="padding-top: 50px;">
-     <ProjectExperience></ProjectExperience>
+     <ProjectExperience :show="show"></ProjectExperience>
    </div>
 
    <div class="divider">
@@ -83,7 +83,8 @@
         data () {
           return {
               hb:'http://qexz4xnye.hn-bkt.clouddn.com/h-b1.jpg',
-              divider:{}
+              divider:{},
+              show:true,
           }
         },
 
