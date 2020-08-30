@@ -74,34 +74,35 @@
       		  pagination: {
       		  			el: '.swiper-pagination',
       		  			clickable :true,
-
-      		  		  renderBullet: function (index, className) {
-                    var text="";
-      		  		          switch(index){
-      		  		            case 0:text='';break;
-      		  		            case 1:text='';break;
-      		  		            case 2:text='';break;
-      		  		            case 3:text='';break;
-      		  		            case 4:text='';break;
-      		  		          }
-      		  		          return '<span class="' + className + '">' + text + '</span>';
-      		  		        },
+                   
+          
+      		  		  // renderBullet: function (index, className) {
+                  //   var text="";
+      		  		  //         switch(index){
+      		  		  //           case 0:text='';break;
+      		  		  //           case 1:text='';break;
+      		  		  //           case 2:text='';break;
+      		  		  //           case 3:text='';break;
+      		  		  //           case 4:text='';break;
+      		  		  //         }
+      		  		  //         return '<span class="' + className + '">' + text + '</span>';
+      		  		  //       },
       		  		  },
       		  navigation: {
       			nextEl: '.swiper-button-next',
       			prevEl: '.swiper-button-prev',
       		  },
 
-            // on:{
-            //   init: function(){
-            //    swiperAni.swiperAnimateCache(this); //隐藏动画元素
-            //    swiperAni.swiperAnimate(this); //初始化完成开始动画
-            //      },
-            //      slideChangeTransitionStart: function(){
-            //      swiperAni.swiperAnimate(this); //每个slide开始切换时也运行当前slide动画
-            //      this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); // 动画只展现一次，去除ani类名
-            //         }
-            //     },
+            on:{
+              init: function(){
+               swiperAni.swiperAnimateCache(this); //隐藏动画元素
+               swiperAni.swiperAnimate(this); //初始化完成开始动画
+                 },
+                 slideChangeTransitionStart: function(){
+                 swiperAni.swiperAnimate(this); //每个slide开始切换时也运行当前slide动画
+                 this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); // 动画只展现一次，去除ani类名
+                    }
+                },
 
       		});
       		window.onresize=function(){
@@ -169,8 +170,7 @@ body {
     .swiper-container {
 	    padding-bottom:40px;
     }
-	.swiper-wrapper{
-	}
+
     .swiper-slide {
 	    width:100%;
 		transition-timing-function:linear;
@@ -227,12 +227,12 @@ body {
        line-height: 20px;
        font-size: 12px;
        opacity: 1;
-      background: -webkit-linear-gradient(right, #ffffff , #ff5500) !important;
-       background: linear-gradient(to left,  #ffffff , #ffffff) !important;
+      background: -webkit-linear-gradient(right, #696969 , #ff5500) !important;
+       background: linear-gradient(to left,  #ffffff , #ffffff) 
      }
 
      .swiper-pagination-bullet-active {
        color: #fff;
-       background: #ffffff;
+       background: #ffffff !important;
      }
 </style>

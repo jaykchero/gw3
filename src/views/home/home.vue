@@ -135,18 +135,6 @@ export default {
   }
 }
 
-.slide-one {
-  // background: url(http://qexz4xnye.hn-bkt.clouddn.com/home_top.jpg) no-repeat center;
-  // background-size: cover;
-}
-.slide-two {
-  // background: url(http://qexz4xnye.hn-bkt.clouddn.com/home_do.jpg) no-repeat center;
-  // background-size: cover;
-}
-.slide-three {
-  // background: url(http://qexz4xnye.hn-bkt.clouddn.com/home_anli.jpg) no-repeat center;
-  // background-size: cover;
-}
 
 .order {
   order: -1;

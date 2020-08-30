@@ -161,9 +161,7 @@
   }
   img{
     width: 497px;
-;
     height: 497px;
-
   }
 
 
