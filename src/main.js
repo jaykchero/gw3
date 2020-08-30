@@ -13,8 +13,8 @@ Vue.use(Table);
 Vue.use(Divider);
 Vue.use(Icon);
 
-import ajax from './api'
-Vue.prototype.$http =ajax;
+// import ajax from './api'
+// Vue.prototype.$http =ajax;
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper);
