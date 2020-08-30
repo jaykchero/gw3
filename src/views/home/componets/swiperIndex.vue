@@ -226,13 +226,13 @@ body {
        text-align: center;
        line-height: 20px;
        font-size: 12px;
-       opacity: 1;
+       /* opacity: 1;
       background: -webkit-linear-gradient(right, #ffffff , #ff5500) !important;
-       background: linear-gradient(to left,  #ffffff , #ffffff) 
+       background: linear-gradient(to left,  #ffffff , #ffffff)  */
      }
 
-     .swiper-pagination-bullet-active {
+     /* .swiper-pagination-bullet-active {
        color: #fff;
        background: #ffffff ;
-     }
+     } */
 </style>
