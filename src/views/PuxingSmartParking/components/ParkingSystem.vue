@@ -128,9 +128,9 @@
       }
 
       .lii:hover{
-        -webkit-transform: scale(1.2);
-      	  -moz-transform: scale(1.2);
-      			transform: scale(1.3);
+        -webkit-transform: scale(1.1);
+      	  -moz-transform: scale(1.1);
+      			transform: scale(1.1);
       }
 
 
@@ -160,13 +160,13 @@
      }
 
      .sp-c-left svg{
-        margin-left: -530px;
+      margin-right: 90px;
       }
       .sp-c-left img{
 
         width: 140px;
         height: 140px;
-        margin-left: 150px;
+        margin-left: 160px;
          float: left;
       }
       .sp-c-left p{

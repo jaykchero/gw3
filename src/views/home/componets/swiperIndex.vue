@@ -227,12 +227,12 @@ body {
        line-height: 20px;
        font-size: 12px;
        opacity: 1;
-      background: -webkit-linear-gradient(right, #696969 , #ff5500) !important;
+      background: -webkit-linear-gradient(right, #ffffff , #ff5500) !important;
        background: linear-gradient(to left,  #ffffff , #ffffff) 
      }
 
      .swiper-pagination-bullet-active {
        color: #fff;
-       background: #ffffff !important;
+       background: #ffffff ;
      }
 </style>
