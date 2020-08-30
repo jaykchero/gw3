@@ -18,7 +18,7 @@
     </div>
 
     <div class="right animated slideInRight" >
-        <img :src="img" alt="">
+        <img v-lazy="img" >
     </div>
 
   </div>
@@ -164,7 +164,7 @@
 
 
     img{
-      width: 249px;
+      width: 497px;
       height: 497px;
 
     }

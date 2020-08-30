@@ -2,7 +2,8 @@
   <div id="p-content">
 
     <div class="h-b">
-        <img src="http://qexz4xnye.hn-bkt.clouddn.com/h-b2.jpg" alt="">
+       
+        <img v-lazy="hb" alt=""/>
     </div>
       <div class="p-content-item">
    <test01 id="t1" class="test2"></test01>
@@ -27,6 +28,12 @@
       test02,
       test03,
       Bottom
+    },
+
+    data () {
+      return {
+        hb:'http://qexz4xnye.hn-bkt.clouddn.com/h-b2.jpg'
+      }
     },
 
     mounted:function (){

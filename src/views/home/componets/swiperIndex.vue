@@ -92,16 +92,16 @@
       			prevEl: '.swiper-button-prev',
       		  },
 
-            on:{
-              init: function(){
-               swiperAni.swiperAnimateCache(this); //隐藏动画元素
-               swiperAni.swiperAnimate(this); //初始化完成开始动画
-                 },
-                 slideChangeTransitionStart: function(){
-                 swiperAni.swiperAnimate(this); //每个slide开始切换时也运行当前slide动画
-                   //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
-                    }
-                },
+            // on:{
+            //   init: function(){
+            //    swiperAni.swiperAnimateCache(this); //隐藏动画元素
+            //    swiperAni.swiperAnimate(this); //初始化完成开始动画
+            //      },
+            //      slideChangeTransitionStart: function(){
+            //      swiperAni.swiperAnimate(this); //每个slide开始切换时也运行当前slide动画
+            //      this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); // 动画只展现一次，去除ani类名
+            //         }
+            //     },
 
       		});
       		window.onresize=function(){
@@ -206,10 +206,10 @@ body {
   		background-size:86px 112px;
   		margin-top:-56px;
   		outline:none;}
-	.swiper-button-next{
+	/* .swiper-button-next{
 		background-image:url(../../../assets/img/cursor-next.png);}
 	.swiper-button-prev{
-		background-image:url(../../../assets/img/cursor-prev.png);}
+		background-image:url(../../../assets/img/cursor-prev.png);} */
 
 
 

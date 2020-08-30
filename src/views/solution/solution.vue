@@ -1,7 +1,7 @@
 <template>
 <div class="solution-all">
   <div class="h-b">
-      <img src="http://qexz4xnye.hn-bkt.clouddn.com/h-b2.jpg" alt="">
+    <img v-lazy="hb1" >
   </div>
 
   <div class="solution-all-item">
@@ -71,6 +71,12 @@
         EquipmentDisplay,
          EquipmentDisplay2,
          Bottom
+      },
+
+      data(){
+        return{
+          hb1:'http://qexz4xnye.hn-bkt.clouddn.com/h-b2.jpg'
+        }
       },
 
        mounted:function (){

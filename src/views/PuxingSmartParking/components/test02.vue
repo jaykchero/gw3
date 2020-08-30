@@ -1,11 +1,14 @@
 <template>
-  <div class="t1-all">
-    <div class="t1-context"></div>
+  <div class="sp-all2">
+    <div class="t1-context">
+      
+    </div>
 
   </div>
 </template>
 
 <script>
+  
 </script>
 
 <style scoped="scoped">

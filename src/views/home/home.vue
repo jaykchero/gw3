@@ -29,7 +29,7 @@
   import * as swiperAni from '../../assets/js/animate.js' //根据自己的路径进行引入
 
 
-import { swiper, swiperSlide,swiperPagination } from "vue-awesome-swiper";
+import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
 
   components: {
@@ -37,8 +37,6 @@ export default {
     swiper,
     swiperSlide,
     myAdv,
-    swiperPagination
-
   },
   data() {
     return {
@@ -47,7 +45,7 @@ export default {
         title1: '关注微信公众号小程序',
         info: '小程序，公众号无需安装卸载方便快捷，满足不同客户的不同需求。',
         title2: '优势特点',
-        img:'http://qexz4xnye.hn-bkt.clouddn.com/bj3.png',
+        img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%B0%8F%E7%B1%B310u.jpg',
         list: ['1111', '22222', '33333', '4444444444', '55555555', '6666666666666']
 
       },
@@ -56,7 +54,7 @@ export default {
         title1: '关注微信公众号小程序',
         info: '小程序，公众号无需安装卸载方便快捷，满足不同客户的不同需求。',
         title2: '优势特点',
-        img: 'https://ali.xmssdn.micloud.mi.com/2/1566455553514/get_thumbnail?sig=hhkvKp1z55plOo8ycTnF0cEoZnU&data=Rz0-QcDdmp7TigDYeIQKrnFxrMCvNjm4_JRsYt9i3_Kn7lQptnD-JRVbeD1hDt8CXlYIL7dC6syuKrWoJCcjKrAWEhNF2xWGUTNY0QBRc1vY7AhrzPc8zc6gryP9vC3qT3-huzE6RMrPJnVZqgVGqQlIt-ewFfcXnPYEnYkuI-24wRW61rO_npxPUh-DzdTAhDxEThzEEbJspXxfcI4WUxXW7Jo7LoXJVJFK9y-EIg02eMm3u2Xz8m2FP4jNTBCHa0DdCOdM40Yevv2nSsf9f5jKFwQxRc8arHZNJ1qmTllSgIFb5aBrzkxIMlDxk2yCoWG7sfpCFw&ts=1597053490843&w=1080&h=1080&r=0&_cachekey=dae5a6728c1fc8962d6fd21e683810bb',
+        img: 'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%B0%8F%E7%B1%B310u.jpg',
         list: ['1111', '22222', '33333', '4444444444', '55555555', '6666666666666']
 
       },
@@ -67,8 +65,8 @@ export default {
       swiperOption: {
         notNextTick: true, //notNextTick是一个组件自有属性，如果notNextTick设置为true，组件则不会通过NextTick来实例化swiper，也就意味着你可以在第一时间获取到swiper对象，假如你需要刚加载遍使用获取swiper对象来做什么事，那么这个属性一定要是true
         direction: "vertical", //水平方向移动
-        grabCursor: true, //鼠标覆盖Swiper时指针会变成手掌形状，拖动时指针会变成抓手形状
-        setWrapperSize: true, //Swiper使用flexbox布局(display: flex)，开启这个设定会在Wrapper上添加等于slides相加的宽或高，在对flexbox布局的支持不是很好的浏览器中可能需要用到。
+      //  grabCursor: true, //鼠标覆盖Swiper时指针会变成手掌形状，拖动时指针会变成抓手形状
+       // setWrapperSize: true, //Swiper使用flexbox布局(display: flex)，开启这个设定会在Wrapper上添加等于slides相加的宽或高，在对flexbox布局的支持不是很好的浏览器中可能需要用到。
         autoHeight: true, //自动高度。设置为true时，wrapper和container会随着当前slide的高度而发生变化
         slidesPerView: 1, //设置slider容器能够同时显示的slides数量(carousel模式)。可以设置为数字（可为小数，小数不可loop），或者 'auto'则自动根据slides的宽度来设定数量。loop模式下如果设置为'auto'还需要设置另外一个参数loopedSlides。
         mousewheel: true, //开启鼠标滚轮控制Swiper切换。可设置鼠标选项，默认值false
@@ -84,12 +82,12 @@ export default {
 
             on:{
               init: function(){
-               //swiperAni.swiperAnimateCache(this); //隐藏动画元素
+               swiperAni.swiperAnimateCache(this); //隐藏动画元素
                swiperAni.swiperAnimate(this); //初始化完成开始动画
                  },
                  slideChangeTransitionStart: function(){
                  swiperAni.swiperAnimate(this); //每个slide开始切换时也运行当前slide动画
-                   //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+                   this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); //动画只展现一次，去除ani类名
                     }
                 },
       }
@@ -102,20 +100,7 @@ export default {
       return this.$refs.mySwiper.swiper;
     }
   },
-  mounted() {
-    this.$http
-      .all([
-        this.$http.get("Cases/GetCasesAll"),
-        this.$http.get(`News?type=1&num=3`)
-      ])
-      .then(
-        this.$http.spread((responseCases, responseNews) => {
-          this.caseList = responseCases.data;
-          this.newsList = responseNews.data;
-          this.loading = false;
-        })
-      );
-  }
+
 };
 </script>
 

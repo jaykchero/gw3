@@ -13,6 +13,8 @@ Vue.use(Table);
 Vue.use(Divider);
 Vue.use(Icon);
 
+import ajax from './api'
+Vue.prototype.$http =ajax;
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper);
@@ -29,7 +31,7 @@ Vue.use(VueLazyload, {
   //加载时显示的GIF图
   loading: require('./assets/img/loading.gif'),
   //尝试加载几次
-  attempt: 1
+  attempt: 2
 });
 
 

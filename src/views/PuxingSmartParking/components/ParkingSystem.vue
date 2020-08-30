@@ -8,7 +8,8 @@
       <div class="ps-context">
         <div class="sp-c-left">
           <div class="cl1 tl1">
-             <img class="lii" src="http://qexz4xnye.hn-bkt.clouddn.com/ps-w.jpg" alt="">
+             <img class="lii" v-lazy="i1" alt="">
+
            <p>
              云算法
              智能识别车牌
@@ -18,7 +19,7 @@
             <svg t="1597372437235" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6216" width="32" height="32"><path d="M489.90890885 1017.28884579l-1e-8-662.73273745L551.27305136 354.55610835 551.27305136 1017.28884579l-61.36414251-2e-8z" fill="#14679f" p-id="6217"></path><path d="M306.28092891 358.28692148L515.86227332 1.43220042l215.24570478 356.85472106-424.82704919 0z" fill="#14679f" p-id="6218"></path></svg>
 
           <div class="cl2 tl1">
-            <img class="lii" src="http://qexz4xnye.hn-bkt.clouddn.com/ps-w.jpg" alt="">
+            <img class="lii" v-lazy="i1" alt="">
             <p>
               车辆图片
               拍照上传
@@ -28,7 +29,7 @@
             <svg t="1597372437235" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6216" width="32" height="32"><path d="M489.90890885 1017.28884579l-1e-8-662.73273745L551.27305136 354.55610835 551.27305136 1017.28884579l-61.36414251-2e-8z" fill="#14679f" p-id="6217"></path><path d="M306.28092891 358.28692148L515.86227332 1.43220042l215.24570478 356.85472106-424.82704919 0z" fill="#14679f" p-id="6218"></path></svg>
 
           <div class="cl3 tl1">
-             <img class="lii" src="http://qexz4xnye.hn-bkt.clouddn.com/ps-w.jpg" alt="">
+             <img class="lii" v-lazy="i1" alt="">
             <p>车辆进出检测</p>
           </div>
           <h3 class="h3 tl1" style="height: 80px;  margin-top: -80px; margin-right: 170px;">车牌采集</h3>
@@ -43,13 +44,15 @@
              <svg t="1597372713399" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11166" width="48" height="48"><path d="M486.4 0h51.2v1024H486.4z" fill="#F79646" p-id="11167"></path></svg>
               <br>
               <svg t="1597372713399" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11166" width="48" height="48"><path d="M486.4 0h51.2v1024H486.4z" fill="#F79646" p-id="11167"></path></svg>
-               <img class="lii" src="http://qexz4xnye.hn-bkt.clouddn.com/product_group_3_img.png" alt="">
+             
+              <img class="lii" v-lazy="i2" alt="">
+
                <h3 class="h3 tl1" style="margin-top: -10px;">云监管平台</h3>
            </div>
       </div>
 
       <div class="ps-bottom">
-        <div class="b-img tl1"><img class="lii" src="http://qexz4xnye.hn-bkt.clouddn.com/product_group_3_img.png" alt=""></div>
+        <div class="b-img tl1">  <img class="lii" v-lazy="i3" alt=""></div>
         <div class="b-b tl1"><h3 class="h3">巡查端辅助运营管理</h3></div>
       </div>
 
@@ -62,6 +65,9 @@
 
     data () {
       return {
+        i1:'http://qexz4xnye.hn-bkt.clouddn.com/ps-w.jpg',
+        i2:'http://qexz4xnye.hn-bkt.clouddn.com/product_group_3_img.png',
+        i3:"http://qexz4xnye.hn-bkt.clouddn.com/product_group_3_img.png",
           fadeInElements:{},
           fadeInElements1:{}
       }

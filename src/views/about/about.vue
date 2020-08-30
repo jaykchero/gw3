@@ -5,7 +5,8 @@
 
 
       <div class="h-b">
-          <img src="http://qexz4xnye.hn-bkt.clouddn.com/h-b1.jpg" alt="">
+          <!-- <img src="http://qexz4xnye.hn-bkt.clouddn.com/h-b1.jpg" alt=""> -->
+           <img v-lazy="hb">
       </div>
  <div class="about-all-item">
       <div id="about1" class="about" >
@@ -66,6 +67,7 @@
 
         data () {
           return {
+              hb:'http://qexz4xnye.hn-bkt.clouddn.com/h-b1.jpg',
               divider:{}
           }
         },

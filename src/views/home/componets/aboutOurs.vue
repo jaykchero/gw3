@@ -44,7 +44,7 @@
 </template>
 <script>
     import advAboutOurs from './advAboutOurs.vue'
-    import img1 from '../../../assets/company/about1.jpg'
+   
 
      import {TweenMax, Power2, TimelineLite,TweenLite} from "gsap";
 
@@ -66,7 +66,7 @@
         title3:'公司经营范围',
         englist3:'Business Scope Of The Company',
         info3:'物联网平台运营，物联网应用，智能停车系统于设备等，属于首批路测停车泊车位系统的探索着。公司本着科技改变生活的理念，希望能通过我们的努力，解决城市交通日益拥堵问题，创造更好的生活环境，提升百姓生活的幸福感。',
-        img:img1,
+        img:"https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%B0%8F%E7%B1%B310u.jpg",
       },
 
 
