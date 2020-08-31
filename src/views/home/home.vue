@@ -43,6 +43,7 @@ export default {
     swiper,
     swiperSlide,
     myAdv,
+
   },
   data() {
     return {
@@ -84,6 +85,7 @@ export default {
         pagination: {
                 el: '.swiper-pagination1',
                 dynamicBullets: true,
+                clickable :true,
               },
 
             on:{
@@ -148,4 +150,11 @@ export default {
 .order-img {
   order: 1;
 }
+</style>
+
+<style>
+  .swiper-pagination1{
+    z-index: 999;
+
+  }
 </style>

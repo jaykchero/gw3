@@ -4,22 +4,22 @@
       <div class="swiper-wrapper">
          <div class="swiper-slide slide-one">
            <div class="page ani home"  swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
-              <h3>普行智能停车</h3>
+<!--              <h3>普行智能停车</h3>-->
             </div>
            </div>
         <div class="swiper-slide slide-two">
-          <div <div class="page ani home"  swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0.6s">>
-             <h3>普行智能停车</h3>
+           <div class="page ani home"  swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
+<!--             <h3>普行智能停车</h3>-->
            </div>
         </div>
         <div class="swiper-slide slide-three">
-            <div<div class="page ani home"  swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0.6s">>
-               <h3>普行智能停车</h3>
+            <div class="page ani home"  swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
+<!--               <h3>普行智能停车</h3>-->
              </div>
         </div>
         <div class="swiper-slide slide-four">
-           <div <div class="page ani home"  swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0.6s">>
-              <h3>普行智能停车</h3>
+          <div class="page ani home"  swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
+<!--              <h3>普行智能停车</h3>-->
             </div>
 
         </div>
@@ -74,8 +74,8 @@
       		  pagination: {
       		  			el: '.swiper-pagination',
       		  			clickable :true,
-                   
-          
+
+
       		  		  // renderBullet: function (index, className) {
                   //   var text="";
       		  		  //         switch(index){
@@ -134,22 +134,22 @@
 
     .slide-one {
       height: 700px !important;
-      background: url(http://qexz4xnye.hn-bkt.clouddn.com/home_top.jpg) no-repeat center;
+      background: url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E9%A6%96%E9%A1%B5/banner1.png) no-repeat center;
       background-size: cover;
     }
     .slide-two {
        height: 700px !important;
-      background: url(http://qexz4xnye.hn-bkt.clouddn.com/home_do.jpg) no-repeat center;
+      background: url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E9%A6%96%E9%A1%B5/banner2.png) no-repeat center;
       background-size: cover;
     }
     .slide-three {
        height: 700px !important;
-      background: url(http://qexz4xnye.hn-bkt.clouddn.com/home_top.jpg) no-repeat center;
+      background: url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E9%A6%96%E9%A1%B5/banner3.png) no-repeat center;
       background-size: cover;
     }
     .slide-four {
       height: 700px !important;
-      background: url(http://qexz4xnye.hn-bkt.clouddn.com/home_do.jpg) no-repeat center;
+      background: url(https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E9%A6%96%E9%A1%B5/banner4.png) no-repeat center;
       background-size: cover;
     }
 
@@ -223,16 +223,16 @@ body {
   .swiper-pagination-bullet {
        width: 15px !important;
        height: 15px !important;
-       text-align: center;
-       line-height: 20px;
-       font-size: 12px;
-       /* opacity: 1;
-      background: -webkit-linear-gradient(right, #ffffff , #ff5500) !important;
-       background: linear-gradient(to left,  #ffffff , #ffffff)  */
+       text-align: center  !important;
+       line-height: 20px  !important;
+       font-size: 12px  !important;
+        opacity: 1  !important;
+      background: -webkit-linear-gradient(right, #2475a6, dodgerblue) !important;
+       background: linear-gradient(to left, #29a5ff, #4b74ff)  !important
      }
 
-     /* .swiper-pagination-bullet-active {
-       color: #fff;
-       background: #ffffff ;
-     } */
+      .swiper-pagination-bullet-active {
+       color: #fff  !important;
+       background: #ffffff !important;
+     }
 </style>
