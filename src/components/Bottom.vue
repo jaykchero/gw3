@@ -9,11 +9,15 @@
 </div>
 <div class="bottom-c">
   <div class="c-left  af">
-  <a href="#" class="c-logo">Logo</a>
-
+  <a href="#" class="c-logo"><img style="width: 120px;height: 60px" src="../assets/logo.png" alt=""></a>
   <span>普行智能停车（深圳）有限公司</span>
   </div>
   <div class="c-center af">
+    <div >
+
+      <img class="cc-img" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/1598768066%281%29.png" alt="">
+      <img class="cc-img" src="https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/xcx.png" alt="">
+    </div>
   <p>地址：广东省深圳市宝安区西乡街道宝田一路嘉皇源科技园A栋三楼305室</p>
   <p>电话：0755-23286587</p>
   <p>手机：88888888888</p>
@@ -39,8 +43,11 @@
   export default {
 
     date () {
-
-      left:{}
+    return {
+      left:[],
+      officialAccount:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/1598768066%281%29.png',
+      xcx:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/xcx.png'
+    }
 
     },
 
@@ -82,6 +89,13 @@
 <style>
   body{
     text-align: center;
+  }
+
+  .cc-img {
+   margin-bottom: 20px;
+    width: 130px;
+    height: 130px;
+    margin-left: 30px;
   }
 
   .bottom-all{
@@ -129,18 +143,20 @@
     height: 46px;
     color: #f3f3f3;
     font-size: 18px;
+    margin-bottom: 20px;
   }
 
   .c-center{
     color: #f3f3f3;
     position: absolute;
-    top: 150px;
+    top: 50px;
     left: 500px;
+
   }
   .c-right{
     color: #f3f3f3;
     position: absolute;
-    top: 150px;
+    top: 180px;
     left: 1150px;
   }
 

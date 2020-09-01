@@ -7,7 +7,7 @@
 
       <div class="ps-context">
         <div class="sp-c-top">
-          <div class="tl1" style=" margin-bottom: 50px"><h3>车牌采集</h3></div>
+          <div class="tl1" style=" margin-bottom: 50px"><h3 class="lh33">车牌采集</h3></div>
           <div class="cl ">
              <img class="lii tl1" v-lazy="i1" alt="">
            <p class="tl1">
@@ -51,7 +51,7 @@
         </div>
 
             <div class="ps-bottom">
-              <div class="tl1"><h3>系列优势</h3></div>
+              <div class="tl1"><h3 class="lh33">系列优势</h3></div>
               <div class="xlys ">
                 <Xlys ></Xlys>
 
@@ -218,11 +218,20 @@
     .lh3{
           color: #555;
           text-align: left;
-          font-size: 30px;
+          font-size: 25px;
           line-height: 36px;
           margin: 5px 0 0;
           font-family: "itcavantgardepro-bk";
           position: relative;
+    }
+    .lh33{
+      color: #555;
+      text-align: center;
+      font-size: 25px;
+      line-height: 36px;
+      margin: 5px 0 0;
+      font-family: "itcavantgardepro-bk";
+      position: relative;
     }
 
     .h2{

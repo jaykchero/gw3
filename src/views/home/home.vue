@@ -7,7 +7,7 @@
       <swiper-slide class="swiper-slide slide-two">
       <div class="ani home" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
 <!--        <my-adv :title1="adv1.title1" :info="adv1.info" :title2="adv1.title2" :list="adv1.list" :img="adv1.img"></my-adv>-->
-        <h2>项目经验</h2>
+        <p>项目经验</p>
         <p>鼠标选中查看详情</p>
         <Protecteds></Protecteds>
 
@@ -114,7 +114,6 @@ export default {
 
 <style lang="scss" scoped>
 
-
 .swiper-slide {
   font-size: 16px;
 
@@ -123,17 +122,7 @@ export default {
   justify-content: center;
   align-content: center;
 
-  .page {
-    text-align: center;
-    height: 100px;
-    overflow: hidden;
-    h3,
-    p {
-      font-size: 20px;
-      font-weight: 400;
-      color: #fff;
-    }
-  }
+
 
   .slogan {
     text-align: center;
@@ -152,9 +141,4 @@ export default {
 }
 </style>
 
-<style>
-  .swiper-pagination1{
-    z-index: 999;
 
-  }
-</style>
