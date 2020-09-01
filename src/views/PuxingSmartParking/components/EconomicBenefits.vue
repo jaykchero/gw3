@@ -99,8 +99,13 @@
 
 <style scoped>
 
+  p{
+    margin-top: 20px;
+  }
+
   .h3{
     margin-top: 10px;
+    margin-bottom: 10px;
     text-align: left;
     display: block;
     color: #F79646;
