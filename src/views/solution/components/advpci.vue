@@ -4,9 +4,7 @@
 
 
   <div class="adv" :class="{toleft:isToLeft}">
-    <div class="left2 " >
-
-
+    <div class="left2" >
       <h2 class="h2 tl1">{{title1}}</h2>
       <h3 class="lh3 tl1">{{englist}}</h3>
       <p class="p tl1">{{info}}</p>
@@ -22,8 +20,8 @@
          <p class="p tl1">根本性解决收费不公开透明，其它系统方案不能解决的准确及时收费问题，避免运营商的损失。</p>
 
     </div>
-    <div class="right " >
-        <img :src="img" alt="">
+    <div class="right" >
+        <img v-lazy="img" alt="">
     </div>
 
   </div>
@@ -101,21 +99,27 @@
 
 </script>
 
-<style>
+<style scoped>
+
+  .right{
+    float: right;
+
+  }
 
     .ap-all{
       padding-left: 50px;
       padding-right: 50px;
-      height: 655;
+      height: 655px;
       width: 1200px;
       margin: 0 auto;
       overflow: hidden;
+
     }
 
 
     .left2{
       vertical-align: top;
-      width: 50%;
+      float: left;
     }
 
 
@@ -141,18 +145,7 @@
     font-size: 18px;
     }
 
-  .ul{
-      width:330px ;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .li{
-      display: block;
-        width: 10rem;
-        height: 36px;
-        text-align: center;
-    }
+
     .lh3{
           color: #555;
           text-align: left;

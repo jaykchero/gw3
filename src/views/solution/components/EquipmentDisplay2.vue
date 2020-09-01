@@ -23,7 +23,7 @@
 
 <script>
   import culture from './advSB.vue'
- 
+
 
   export default{
 
@@ -34,7 +34,7 @@
     data() {
       return {
         adv1:{
-          img:'https://ali.xmssdn.micloud.mi.com/2/1566455553514/get_thumbnail?sig=ct1dVtOF6fHi9XtkWFk9dz0DVcc&data=Rz0-jhUfROR0AsDq_4lmAXYKJA2mfPX6wOloL1C3ASRLs4sptgQetq5cVEw4b7xXSjr1R4VC6syuKrWoNFAnfzROViREprgH9iQCShdIigzY7JQJU5-kUU8XoIXWvMifPvihu2svRMrpJUhBiy8L5Ux6o-ewFTjCXih-OgHuEWq1rbq9rTtyl9aDECP-yZlPUeKSokEbEbIYRe_kd6JnCnS1uY5X0-37VJFK9y8GdSN3RmCsGSpP7Xh8VbaCTBCHa0DdCOdM40YevqeySsftCJyfk1x1cs5nAffqMAA9WUCr14FZUyBrzkxIMlDxk2yCoWG7sfpCFw&ts=1597053626770&w=1080&h=1080&r=0&_cachekey=c34cc015eaf3d7801ccca51868693aed',
+          img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/notebook.png',
           title1:'设备2展示',
           englist:'Equipment Display',
 

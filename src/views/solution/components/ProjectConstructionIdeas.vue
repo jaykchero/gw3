@@ -31,7 +31,7 @@
     data() {
       return {
         adv1:{
-          img:'https://ali.xmssdn.micloud.mi.com/2/1566455553514/get_thumbnail?sig=pb1LkOuS3H_7qOYcqQz7VnvMFLY&data=Rz0-JBAZjmI_rjrtPj7HlcGrJoYrzbGhwjFWQDCVc3aF358ptlqFtSObZHiKdWd9EZ5P58hC6syuKrWoc0nZNYsvp7kIltI_fOw3L_ERCUXY7B_CyJM9pT53wdiErnwGiRGh1yw0RMrdO3dc7nlr6XZZ1uewFZLHWOL4ca0UFqsCDC4KDDn5GmfHSyEm9_Yvc5DAbC0PEbJG3uxpsJJTuG5uk9XzaU22VJFK9y9vnlq7kT2AR6TdBNBNqVSpTBCHa0DdCOdM40Ye0uCpSseqEWLVLD2E74JXa89g-DVYvxkonoFaItZrzkxLMlDxk2yCu3-5wkzmEcY&ts=1597054341309&w=1080&h=1080&r=0&_cachekey=6c6a9c0ed6e876ee3797550614229122',
+          img:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/iphone.png',
           title1:'项目建设思路',
           englist:'Project construction ideas',
           title2:'建设智能停车系统',

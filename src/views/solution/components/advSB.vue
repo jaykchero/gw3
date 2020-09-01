@@ -40,12 +40,12 @@
           },
           mounted () {
               // 先获取全部需要过渡效果的元素
-              this.fadeInElements = Array.from(document.getElementsByClassName('fade-in'))
+
                this.left = Array.from(document.getElementsByClassName('left'))
-                this.right = Array.from(document.getElementsByClassName('right'))
+                this.right = Array.from(document.getElementsByClassName('sbright'))
                //  console.log("hah"+this.left)
               // 监听鼠标滚动事件
-              document.addEventListener('scroll', this.handleScroll)
+
                document.addEventListener('scroll', this.handleScroll2)
                document.addEventListener('scroll', this.handleScroll3)
 
@@ -80,18 +80,6 @@
                },
 
 
-
-                // 循环判断是否要触发过渡
-                handleScroll (evt) {
-                  for (var i = 0; i < this.fadeInElements.length; i++) {
-                    var elem = this.fadeInElements[i]
-                    if (this.isElemVisible(elem)) {
-                      elem.style.opacity = '1'
-                      elem.style.transform = 'scale(1)'
-                      this.fadeInElements.splice(i, 1) // 只让它运行一次
-                    }
-                  }
-                },
            // 判断元素距离窗口的位置
               isElemVisible (el) {
                 var rect = el.getBoundingClientRect()
@@ -105,6 +93,27 @@
 </script>
 
 <style scoped="scoped">
+
+
+
+  .sbright{
+    width: 50%;
+  }
+  .toleft{
+    flex-direction: row-reverse;
+  }
+
+  .adv{
+    position: relative;
+    padding-top: 100px;
+    display: flex;
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+    align-items: auto;
+    justify-content: space-between;
+
+  }
 
     .clearfix{
         padding-left: 50px;
@@ -150,18 +159,7 @@
     font-size: 18px;
     }
 
-  .ul{
-      width:330px ;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .li{
-      display: block;
-        width: 10rem;
-        height: 36px;
-        text-align: center;
-    }
+
     .lh3{
           color: #555;
           text-align: left;
@@ -174,44 +172,9 @@
 
 
     img{
-      width: 500px !important;
-      height: 500px !important;
+      width: 249px !important;
+      height: 497px !important;
 
-    }
-
-    /* 动画css */
-  .container {
-      display: table;
-      width: 80%;
-      min-width: 450px;
-      margin: 0 auto;
-    }
-
-    .fade-in {
-      /* background-color: #F5F5F5; */
-      height: 500px;
-      margin-bottom: 50px;
-      opacity: 0;
-      transition: 0.5s all ease-out;
-      transform: scale(0.8);
-      box-sizing: border-box;
-      padding: 20px;
-      display: inline-block;
-    }
-    .full-width {
-      width: 100%;
-    }
-
-    .half-width {
-      width: 47.5%;
-    }
-
-    .half-width:nth-of-type(2n + 1) {
-      margin-right: 2.5%;
-    }
-
-    .half-width:nth-of-type(2n) {
-      margin-left: 2.5%;
     }
 
 

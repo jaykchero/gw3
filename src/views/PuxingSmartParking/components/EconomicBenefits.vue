@@ -100,7 +100,7 @@
 <style scoped>
 
   p{
-    margin-top: 20px;
+    line-height: 25px;
   }
 
   .h3{
