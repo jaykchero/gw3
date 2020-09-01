@@ -153,7 +153,7 @@
     .p{
       margin-top: 0px !important;
     color: #605656;
-    line-height: 24px;
+    line-height: 24px !important;
     text-align: left;
     }
 

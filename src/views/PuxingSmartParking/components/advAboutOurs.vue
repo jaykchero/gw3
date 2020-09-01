@@ -172,7 +172,7 @@
   .p{
   color: #605656;
   margin-top: 10px;
-  line-height: 24px;
+  line-height: 24px !important;
   text-align: left;
   }
 

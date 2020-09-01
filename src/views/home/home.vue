@@ -115,6 +115,7 @@ export default {
 <style lang="scss" scoped>
   .p{
     font-size: 16px;
+    line-height: 20px !important;
   }
 
 .swiper-slide {
