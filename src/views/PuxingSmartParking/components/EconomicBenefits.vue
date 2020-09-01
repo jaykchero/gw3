@@ -112,7 +112,7 @@
     font-family: 'Nunito', sans-serif;
     background: linear-gradient(to left, #2475a6, #2475a6);
     padding: 10px;
-    width: 820px;
+    width: 750px;
     height: 520px;
     list-style: none;
     border: 1px solid rgba(223,231,239, .7);
@@ -130,7 +130,7 @@
   }
 
   .eb {
-    width: 800px;
+    width: 730px;
     height: 500px;
   }
 
