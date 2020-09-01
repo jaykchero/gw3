@@ -63,7 +63,7 @@
                   //console.log(elem.className)
                   var cN=elem.className
                   if (this.isElemVisible(elem)) {
-                    elem.className=cN+" "+"animated backInUp"
+                    elem.className=cN+" "+"animated fadeInRight"
                      console.log(elem.className)
                     this.right.splice(i, 1) // 只让它运行一次
                   }
@@ -128,13 +128,16 @@
       color: #477e9a;
       font-size: 30px;
       font-weight: bolder;
+
      }
 
     .p{
       margin-top: 0px !important;
     color: #605656;
-    line-height: 24px;
+    line-height: 20px;
     text-align: left;
+
+
     }
 
     .h3{
@@ -143,6 +146,7 @@
     color: #F79646;
     letter-spacing: 0;
     font-size: 18px;
+      margin-top: 20px;
     }
 
 
