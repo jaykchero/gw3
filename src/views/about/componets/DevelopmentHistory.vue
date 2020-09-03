@@ -127,7 +127,7 @@
             }
           }
         },
-        
+
         // 循环判断是否要触发过渡
         handleScroll (evt) {
           for (var i = 0; i < this.fadeInElements.length; i++) {
@@ -190,7 +190,6 @@ body{
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 20px;
-  width: 1200px;
   margin: 0 auto;
 }
 

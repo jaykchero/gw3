@@ -19,24 +19,6 @@
       :img="adv1.img">
       </advAboutOurs>
 
-
-   <!-- <div class="context">
-   <div class="context-left">
-      <h3>公司成立时间:</h3>
-      <p>普行智能停车（深圳）有限公司于2017年12月成立</p>
-      <h3>公司经营范围:</h3>
-      <p>{{Businessscope}}</p>
-    </div>
-    <div class="context-center">
-    <img src="../../../assets/home/iphone.png" alt="" >
-    </div>
-    <div class="context-right">
-      <h3>公司简介</h3>
-      <p>{{Businessintroduction}}</p>
-    </div>
-
-    </div>
-    <div class="bottom">666</div>-->
   </div>
 
 
@@ -81,26 +63,7 @@
       margin: 0;
 
   }
-  .container{
-    background-color: #FFFFFF !important;
-    position: relative;
-    height: 600px !important;
-    width: 1200px;
 
-  }
-  .header{
-     position: relative;
-     left: 23px;
-     padding: 20px;
-     height: 200px;
-
-  }
-  .header-left{
-
-    position: absolute;
-    left: 0px;
-
-  }
   .header h1{
    color: #477e9a;
   font-size: 36px;

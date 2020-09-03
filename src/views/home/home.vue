@@ -35,6 +35,7 @@
 
 
 import { swiper, swiperSlide } from "vue-awesome-swiper";
+  import $ from 'jquery'
 export default {
 
   components: {
@@ -47,7 +48,8 @@ export default {
   },
   data() {
     return {
-
+      screenWidth:'',
+      screenHeight:'',
       adv1: {
         title1: '关注微信公众号小程序',
         info: '小程序，公众号无需安装卸载方便快捷，满足不同客户的不同需求。',
@@ -101,6 +103,10 @@ export default {
       }
     };
   },
+
+
+
+
   created() {},
   // 如果你需要得到当前的swiper对象来做一些事情，你可以像下面这样定义一个方法属性来获取当前的swiper对象，同时notNextTick必须为true
   computed: {
@@ -120,7 +126,7 @@ export default {
 
 .swiper-slide {
   font-size: 16px;
-
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -110,7 +110,7 @@
       padding-left: 50px;
       padding-right: 50px;
       height: 655px;
-      width: 1200px;
+
       margin: 0 auto;
       overflow: hidden;
 

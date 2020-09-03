@@ -110,7 +110,7 @@
     position: relative;
     padding-top: 100px;
     display: flex;
-    width: 1200px;
+
     height: 600px;
     margin: 0 auto;
     align-items: auto;

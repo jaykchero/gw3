@@ -35,7 +35,7 @@
 
 
 
-   <div id="ProjectExperience" class="about"  style="padding-top: 50px;">
+   <div id="ProjectExperience" class="about2"  style="padding-top: 50px;">
      <ProjectExperience :show="show"></ProjectExperience>
    </div>
 
@@ -85,11 +85,33 @@
               hb:'http://qexz4xnye.hn-bkt.clouddn.com/h-b1.jpg',
               divider:{},
               show:true,
+            screenWidth:'',
+            screenHeight:'',
+
           }
         },
 
 
      mounted:function (){
+
+       this.screenWidth = document.body.clientWidth;
+       this.screenHeight = document.body.clientHeight;
+       window.onresize = () => {
+         return (() => {
+           this.screenWidth = document.body.clientWidth;
+           this.screenHeight = document.body.clientHeight;
+         })();
+       };
+
+       if(this.screenWidth>1600){
+         $('.about-all-item').css("width","1600px")
+         $('.about-all-item').css("margin","0 auto")
+         $('.about,.about2').css("width","1600px")
+
+       }
+
+
+
            this.divider = Array.from(document.getElementsByClassName('divider'))
            // 监听鼠标滚动事件
            document.addEventListener('scroll', this.handleScroll)
@@ -150,7 +172,7 @@
 
   .divider{
     margin: 0 auto;
-    width: 1200px;
+    width: 100%;
 
   }
 </style>
@@ -160,8 +182,8 @@
 
 
   .h-b img {
-    width: 1519px;
-     height: 388px;
+    width: 100%;
+    height: 100%;
   }
   .h-b{
     margin-bottom: -50px;

@@ -26,11 +26,34 @@
 
 <script>
   import Swiper from "swiper"
+  import $ from "jquery";
   export default {
+
+
+
     mounted() {
+
+      this.screenWidth = document.body.clientWidth;
+
+      window.onresize = () => {
+        return (() => {
+          this.screenWidth = document.body.clientWidth;
+          //this.screenHeight = document.body.clientHeight;
+        })();
+      };
+
+      if(this.screenWidth>1600){
+        // $('.img').css("width","800px")
+        // $('.img').css("height","600px")
+
+
+      }
+
+
+
      var swiper = new Swiper('.swiper-container', {
           slidesPerView: 3,
-          spaceBetween: 100,
+           spaceBetween: 150,
           centeredSlides: true,
           autoplay:true,
           loop: true,
@@ -100,12 +123,10 @@
     html, body {
       position: relative;
       height: 600px !important;
-      width: 1200px;
 
     }
     body {
-     /* background: #eee; */
-    /* background:url("../../../assets/bg/hytd.jpg") no-repeat; */
+
      background-size: 100%;
       font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
       font-size: 14px;
@@ -114,9 +135,7 @@
       padding: 0;
 
     }
-    .img{
-      /* border:2px solid #F79646; */
-    }
+
     img{
       width: 550px;
       height: 350px;
@@ -152,7 +171,7 @@
 	  transform: scale(0.5);
     }
 	.swiper-slide-active,.swiper-slide-duplicate-active{
-      transform: scale(1);
+      transform: scale(0.8);
 
 	}
 

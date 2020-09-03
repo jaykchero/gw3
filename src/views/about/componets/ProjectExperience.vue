@@ -99,11 +99,13 @@
 </template>
 
 <script>
+  import $ from 'jquery'
 export default {
       props:["show"],
     data() {
         return {
-
+          screenWidth:'',
+          screenHeight:'',
           pt:"https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/putian.jpg",
           bj:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/beijing.jpg',
           heb:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/protect/haerbing.jpg',
@@ -117,9 +119,25 @@ export default {
 
     },
     mounted() {
-
+      this.screenWidth = document.body.clientWidth;
+      this.screenHeight = document.body.clientHeight;
+      window.onresize = () => {
+        return (() => {
+          this.screenWidth = document.body.clientWidth;
+          this.screenHeight = document.body.clientHeight;
+        })();
+      };
+        console.log(this.screenWidth)
+      this.upCss();
     },
     methods: {
+        upCss(){
+          if(this.screenWidth>1600){
+            $('.box img').css({"width":"400px","height":"300px"})
+
+          }
+          console.log($('img').css("wdith"))
+        }
 
     }
 };
@@ -127,7 +145,7 @@ export default {
 
 <style scoped lang="less">
 
-  img{
+  .box img{
     width: 300px;
     height: 200px;
   }

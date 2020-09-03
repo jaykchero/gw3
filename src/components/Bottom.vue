@@ -40,13 +40,17 @@
 
 <script>
 
+  import $ from "jquery";
+
   export default {
 
     date () {
     return {
       left:[],
       officialAccount:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/1598768066%281%29.png',
-      xcx:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/xcx.png'
+      xcx:'https://jaykchero.oss-cn-shenzhen.aliyuncs.com/%E5%85%AC%E4%BC%97%E5%8F%B7/xcx.png',
+      screenWidth:'',
+      screenHeight:'',
     }
 
     },
@@ -54,6 +58,22 @@
     mounted() {
       this.left = Array.from(document.getElementsByClassName('af'))
       document.addEventListener('scroll', this.handleScroll4)
+
+      this.screenWidth = document.body.clientWidth;
+      this.screenHeight = document.body.clientHeight;
+      window.onresize = () => {
+        return (() => {
+          this.screenWidth = document.body.clientWidth;
+          this.screenHeight = document.body.clientHeight;
+        })();
+      };
+
+      if(this.screenWidth>1600){
+        $('.b-center').css("width","1600px")
+
+
+
+      }
     },
 
     methods:{

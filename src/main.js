@@ -38,6 +38,8 @@ Vue.use(VueLazyload, {
 });
 
 
+
+
 new Vue({
   router,
   store,
@@ -49,6 +51,8 @@ new Vue({
           window.scrollTo(0, 0)
 
       })
+
+
 
     },
 

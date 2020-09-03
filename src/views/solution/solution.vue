@@ -75,11 +75,32 @@
 
       data(){
         return{
-          hb1:'http://qexz4xnye.hn-bkt.clouddn.com/h-b2.jpg'
+          hb1:'http://qexz4xnye.hn-bkt.clouddn.com/h-b2.jpg',
+          screenWidth:"",
+          screenHeight:"",
+
         }
       },
 
        mounted:function (){
+
+         this.screenWidth = document.body.clientWidth;
+         this.screenHeight = document.body.clientHeight;
+         window.onresize = () => {
+           return (() => {
+             this.screenWidth = document.body.clientWidth;
+             this.screenHeight = document.body.clientHeight;
+           })();
+         };
+
+         if(this.screenWidth>1600){
+           $('.solution-all-item').css("width","1600px")
+           $('.solution-all-item').css("margin","0 auto")
+            $('.solution,.solution1,.divider').css("width","1600px")
+
+         }
+
+
          this.divider = Array.from(document.getElementsByClassName('divider'))
          // 监听鼠标滚动事件
          document.addEventListener('scroll', this.handleScroll)
@@ -145,7 +166,7 @@
 
   .divider{
     margin: 0 auto;
-    width: 1200px;
+   width: 1200px;
 
   }
 
@@ -165,12 +186,14 @@
       padding-top: 50px;
       margin-top: 100px;
       height: 655px;
+
+      margin: 0 auto;
       overflow: hidden;
     }
 
   .h-b img {
-    width: 1519px;
-     height: 388px;
+    width: 100%;
+     height: 100%;
   }
   .h-b{
     margin-bottom: 70px;

@@ -17,6 +17,7 @@
     "element-ui": "^2.13.2",
     "gsap": "^3.4.2",
     "jquery": "^1.7.2",
+    "lib-flexible": "^0.3.2",
     "popper.js": "^1.16.1",
     "swiper": "^5.2.0",
     "vue": "^2.6.11",
@@ -48,6 +49,8 @@
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "node-sass": "^4.14.1",
+   
+
     "sass-loader": "^9.0.2",
     "vue-template-compiler": "^2.6.11"
   }

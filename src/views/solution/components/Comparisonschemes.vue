@@ -196,7 +196,7 @@ export default {
 
       top: 10px;
       position: relative;
-     
+
       width: 120px;
       height: 0.5px;
       background-color:#2e2e2e;
@@ -237,7 +237,6 @@ td.column-money {
   .all{
     padding-left: 50px;
     padding-right: 50px;
-    width: 1200px;
     margin: 0 auto;
   }
   .h2{
